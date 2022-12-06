@@ -1,12 +1,33 @@
+.languageHeader{
+  background-color: #2b2828;
+  height: 20px;
+}
+
+.languageHeader btn{
+  scale: 10%;
+}
+
 .header {
   background-color: #231f20;
-  height: 100px !important;
+  height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.hamburger {
+.menu-left-side{
+  display: flex;
+  align-items: center;
+}
+
+.search-icon{
+  color: white;
+  height: 50px;
+}
+
+.hamburger-menu-icon {
   color: white;
 }
 
