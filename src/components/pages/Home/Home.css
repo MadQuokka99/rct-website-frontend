@@ -1,0 +1,21 @@
+.header {
+  background-color: #231f20;
+  height: 100px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  color: white;
+}
+
+.logoImage {
+  width: 200px;
+}
+
+.content {
+}
+
+.footer {
+}
