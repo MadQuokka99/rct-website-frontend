@@ -8,6 +8,8 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
+import ROFlag from "../../../utils/flag-ro.png";
+import UKFlag from "../../../utils/flag-uk.png";
 
 const { homepage: homepageStrings } = strings;
 
@@ -26,14 +28,28 @@ const Home = () => {
     console.log("Add search functionality: modal smth smth");
   };
 
+  const handleROFlagClick = () => {
+    console.log("Change language to romanian");
+  };
+
+  const handleUKFlagClick = () => {
+    console.log("Change language to english");
+  };
+
   return (
     <>
       <Helmet>
         <title>{homepageStrings.title}</title>
       </Helmet>
       <div className="languageHeader">
-        <button className="btn">RO</button>
-        <Button>EN</Button>
+        <button className="btn" onClick={handleROFlagClick}>
+          <img src={ROFlag} className="language-flag" alt="Romanian flag" />
+          RO
+        </button>
+        <button className="btn" onClick={handleUKFlagClick}>
+          <img src={UKFlag} className="language-flag" alt="UK flag" />
+          EN
+        </button>
       </div>
 
       <div className="header">
