@@ -39,6 +39,10 @@
   padding-right: 10px;
 }
 
+.header .menuButton{
+  margin-right: 10px;
+}
+
 .menu-left-side{
   display: flex;
   align-items: center;

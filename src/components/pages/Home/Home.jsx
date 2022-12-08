@@ -55,12 +55,25 @@ const Home = () => {
       <div className="header">
         <img src={Logo} className="logoImage" alt="Website logo" />
         <div className="menu-left-side">
-          <Button
-            id="basic-button"
-            aria-controls={open ? "basic-menu" : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? "true" : undefined}
-          >
+          <div className="menu-buttons-bection">
+            <Button variant="contained" className="menuButton">
+              {homepageStrings.menuButtons.home}
+            </Button>
+            <Button variant="contained" className="menuButton">
+              {homepageStrings.menuButtons.news}
+            </Button>
+            <Button variant="contained" className="menuButton">
+              {homepageStrings.menuButtons.schedule}
+            </Button>
+            <Button variant="contained" className="menuButton">
+              {homepageStrings.menuButtons.news}
+            </Button>
+            <Button variant="contained" className="menuButton">
+              {homepageStrings.menuButtons.aboutUs}
+            </Button>
+          </div>
+
+          <Button>
             {<SearchIcon className="search-icon" onClick={handleSearchClick} />}
           </Button>
 
@@ -73,6 +86,7 @@ const Home = () => {
           >
             {<MenuIcon fontSize="large" className="hamburger-menu-icon" />}
           </Button>
+
           <Menu
             id="basic-menu"
             anchorEl={anchorEl}
