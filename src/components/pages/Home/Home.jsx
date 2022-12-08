@@ -140,8 +140,16 @@ const Home = () => {
           </Menu>
         </div>
       </div>
-      <div className="content"></div>
-      <div className="footer"></div>
+      <div className="content">
+        <h1>Content</h1>
+      </div>
+      <div className="footer">
+        <h1>{homepageStrings.footerDetails.slogan}</h1>
+        <hr />
+        <h3>{homepageStrings.footerDetails.phoneNumber}</h3>
+        <h3>{homepageStrings.footerDetails.email}</h3>
+        <h3>{homepageStrings.footerDetails.siteCreator}</h3>
+      </div>
     </>
   );
 };
