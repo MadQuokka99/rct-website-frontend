@@ -1,0 +1,77 @@
+@use "src/globalStyleVariables";
+
+.languageHeader{
+  background-color: #2b2828;
+  height: 30px;
+  max-width: available;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .btn{
+    cursor: pointer;
+    border: 0 solid;
+    background-color: transparent;
+    height: 25px;
+    width: 50px;
+    color: #FFFFFF;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .language-flag{
+    width: 23px;
+    height: 13px;
+    margin-right: 5px;
+  }
+}
+
+.header {
+  background-color: #231f20;
+  height: 120px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .menu-buttons-section{
+    @media screen and (max-width: globalStyleVariables.$large ){
+      display: none;
+    }
+  }
+  .menu-button {
+    margin-right: 10px;
+  }
+  .menu-left-side{
+    display: flex;
+    align-items: center;
+  }
+
+  .search-icon{
+    color: white;
+    height: 50px;
+  }
+
+  .hamburger-menu-icon {
+    color: white;
+    @media screen and (min-width: globalStyleVariables.$large){
+      display: none;
+    }
+  }
+
+  .logoImage {
+    width: 200px;
+    margin-left: 20px;
+  }
+}
+
+
+
+.content {
+}
+
+.footer {
+}

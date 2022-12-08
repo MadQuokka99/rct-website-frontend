@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import strings from "../../../config/strings";
-import "./Home.css";
+import "./Home.scss";
 import Logo from "../../../utils/rct-logo.png";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
@@ -55,20 +55,20 @@ const Home = () => {
       <div className="header">
         <img src={Logo} className="logoImage" alt="Website logo" />
         <div className="menu-left-side">
-          <div className="menu-buttons-bection">
-            <Button variant="contained" className="menuButton">
+          <div className="menu-buttons-section">
+            <Button variant="contained" className="menu-button">
               {homepageStrings.menuButtons.home}
             </Button>
-            <Button variant="contained" className="menuButton">
+            <Button variant="contained" className="menu-button">
               {homepageStrings.menuButtons.news}
             </Button>
-            <Button variant="contained" className="menuButton">
+            <Button variant="contained" className="menu-button">
               {homepageStrings.menuButtons.schedule}
             </Button>
-            <Button variant="contained" className="menuButton">
+            <Button variant="contained" className="menu-button">
               {homepageStrings.menuButtons.news}
             </Button>
-            <Button variant="contained" className="menuButton">
+            <Button variant="contained" className="menu-button">
               {homepageStrings.menuButtons.aboutUs}
             </Button>
           </div>
@@ -83,8 +83,9 @@ const Home = () => {
             aria-haspopup="true"
             aria-expanded={open ? "true" : undefined}
             onClick={handleClick}
+            className="hamburger-menu-icon"
           >
-            {<MenuIcon fontSize="large" className="hamburger-menu-icon" />}
+            {<MenuIcon fontSize="large" />}
           </Button>
 
           <Menu
