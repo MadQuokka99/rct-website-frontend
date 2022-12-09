@@ -1,0 +1,40 @@
+@use "src/globalStyleVariables";
+
+.header {
+  background-color: #231f20;
+  height: 120px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .menu-buttons-section{
+    @media screen and (max-width: globalStyleVariables.$large ){
+      display: none;
+    }
+  }
+  .menu-button {
+    margin-right: 10px;
+  }
+  .menu-left-side{
+    display: flex;
+    align-items: center;
+  }
+
+  .search-icon{
+    color: white;
+    height: 50px;
+  }
+
+  .hamburger-menu-icon {
+    color: white;
+    @media screen and (min-width: globalStyleVariables.$large){
+      display: none;
+    }
+  }
+
+  .logoImage {
+    width: 200px;
+    margin-left: 20px;
+  }
+}
