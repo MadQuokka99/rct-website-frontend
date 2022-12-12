@@ -7,6 +7,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import strings from "../config/strings";
 import "./Header.scss";
+import AudioPlayer from "react-h5-audio-player";
 
 const { general: generalStrings } = strings;
 
@@ -28,6 +29,20 @@ const Header = () => {
     <>
       <div className="header">
         <img src={Logo} className="logoImage" alt="Website logo" />
+        <div>
+          <AudioPlayer
+            autoPlay={false}
+            src="http://rct.unitbv.ro:8000/;?type=http&nocache=38687"
+            showSkipControls={false}
+            showJumpControls={false}
+            volume={0.5}
+            loop={false}
+            className="audioPlayer-header"
+            layout={"horizontal"}
+            // other props here
+          />
+        </div>
+
         <div className="menu-left-side">
           <div className="menu-buttons-section">
             <Button variant="contained" className="menu-button">

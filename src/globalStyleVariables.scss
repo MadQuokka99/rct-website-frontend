@@ -3,3 +3,43 @@ $medium: 600px;
 $large: 830px;
 $extralarge: 1024px;
 
+// Audio player variables
+$rhap_theme-color: #868686 !default;   // Color of all buttons and volume/progress indicators
+$rhap_background-color: #fff !default; // Color of the player background
+$rhap_bar-color: #e4e4e4 !default;     // Color of volume and progress bar
+$rhap_time-color: #333 !default;       // Font color of current time and duration
+$rhap_font-family: inherit !default;   // Font family of current time and duration
+
+// Audio player styling
+.rhap_additional-controls{
+  display: none;
+}
+
+  // On big devices
+@media screen and (min-width: 1200px ) {
+  .audioPlayer-header {
+    width: 500px !important;
+    border-radius: 50px;
+  }
+  .audioPlayer-content{
+    display: none;
+  }
+}
+
+// On small devices
+@media screen and (max-width: 1200px ) {
+  .audioPlayer-header {
+    display: none;
+  }
+  .audioPlayer-content{
+    @media screen and (max-width: 600px ){
+      .rhap_volume-controls{
+        display: none;
+      }
+    }
+
+
+  }
+
+
+}
