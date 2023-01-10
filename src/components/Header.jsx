@@ -39,7 +39,6 @@ const Header = () => {
             loop={false}
             className="audioPlayer-header"
             layout={"horizontal"}
-            // other props here
           />
         </div>
 
