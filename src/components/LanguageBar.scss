@@ -1,7 +1,7 @@
 @use "src/globalStyleVariables";
 
 .languageHeader{
-  background-color: #2b2828;
+  background-color: globalStyleVariables.$primary-color;
   height: 30px;
   max-width: available;
   display: flex;

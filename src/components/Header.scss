@@ -1,7 +1,7 @@
 @use "src/globalStyleVariables";
 
 .header {
-  background-color: #231f20;
+  background-color: globalStyleVariables.$primary-color;
   //height: 120px;
   height: 15vh;
   display: flex;

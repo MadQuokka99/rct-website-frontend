@@ -44,25 +44,25 @@ const Header = () => {
 
         <div className="menu-left-side">
           <div className="menu-buttons-section">
-            <Button variant="contained" className="menu-button">
+            <Button variant="contained" color='secondary' className="menu-button">
               {generalStrings.header.menuButtons.home}
             </Button>
-            <Button variant="contained" className="menu-button">
+            <Button variant="contained" color='secondary' className="menu-button">
               {generalStrings.header.menuButtons.news}
             </Button>
-            <Button variant="contained" className="menu-button">
+            <Button variant="contained" color='secondary' className="menu-button">
               {generalStrings.header.menuButtons.schedule}
             </Button>
-            <Button variant="contained" className="menu-button">
+            <Button variant="contained" color='secondary' className="menu-button">
               {generalStrings.header.menuButtons.news}
             </Button>
-            <Button variant="contained" className="menu-button">
+            <Button variant="contained" color='secondary' className="menu-button">
               {generalStrings.header.menuButtons.aboutUs}
             </Button>
           </div>
 
           <Button>
-            {<SearchIcon className="search-icon" onClick={handleSearchClick} />}
+            {<SearchIcon className="search-icon" color='secondary' onClick={handleSearchClick} />}
           </Button>
 
           <Button
