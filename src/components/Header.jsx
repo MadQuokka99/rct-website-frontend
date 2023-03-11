@@ -8,11 +8,13 @@ import MenuItem from "@mui/material/MenuItem";
 import strings from "../config/strings";
 import "./Header.scss";
 import AudioPlayer from "react-h5-audio-player";
+import { InputLabel, Select } from "@mui/material";
 
 const { general: generalStrings } = strings;
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [language, setLanguage] = useState();
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -44,26 +46,65 @@ const Header = () => {
 
         <div className="menu-left-side">
           <div className="menu-buttons-section">
-            <Button variant="contained" color='secondary' className="menu-button">
+            <Button
+              variant="contained"
+              color="secondary"
+              className="menu-button"
+            >
               {generalStrings.header.menuButtons.home}
             </Button>
-            <Button variant="contained" color='secondary' className="menu-button">
+            <Button
+              variant="contained"
+              color="secondary"
+              className="menu-button"
+            >
               {generalStrings.header.menuButtons.news}
             </Button>
-            <Button variant="contained" color='secondary' className="menu-button">
+            <Button
+              variant="contained"
+              color="secondary"
+              className="menu-button"
+            >
               {generalStrings.header.menuButtons.schedule}
             </Button>
-            <Button variant="contained" color='secondary' className="menu-button">
+            <Button
+              variant="contained"
+              color="secondary"
+              className="menu-button"
+            >
               {generalStrings.header.menuButtons.news}
             </Button>
-            <Button variant="contained" color='secondary' className="menu-button">
+            <Button
+              variant="contained"
+              color="secondary"
+              className="menu-button"
+            >
               {generalStrings.header.menuButtons.aboutUs}
             </Button>
           </div>
 
           <Button>
-            {<SearchIcon className="search-icon" color='secondary' onClick={handleSearchClick} />}
+            {
+              <SearchIcon
+                className="search-icon"
+                color="secondary"
+                onClick={handleSearchClick}
+              />
+            }
           </Button>
+
+          {/*<InputLabel id="demo-simple-select-label">Age</InputLabel>*/}
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={language}
+            label="Age"
+            onChange={() => console.log("Smth")}
+          >
+            <MenuItem value={10}>Ten</MenuItem>
+            <MenuItem value={20}>Twenty</MenuItem>
+            <MenuItem value={30}>Thirty</MenuItem>
+          </Select>
 
           <Button
             id="basic-button"
