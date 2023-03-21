@@ -16,7 +16,6 @@ const Home = () => {
         <title>{homepageStrings.title}</title>
       </Helmet>
       <LanguageBar />
-      <Header />
       <HomePageContent />
       <Footer />
     </>
