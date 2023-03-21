@@ -24,9 +24,6 @@ const Header = () => {
     console.log(e);
   };
 
-  const handleSearchClick = () => {
-    console.log("Add search functionality: modal smth smth");
-  };
   return (
     <>
       <div className="header">
@@ -82,29 +79,6 @@ const Header = () => {
               {generalStrings.header.menuButtons.aboutUs}
             </Button>
           </div>
-
-          <Button>
-            {
-              <SearchIcon
-                className="search-icon"
-                color="secondary"
-                onClick={handleSearchClick}
-              />
-            }
-          </Button>
-
-          {/*<InputLabel id="demo-simple-select-label">Age</InputLabel>*/}
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={language}
-            label="Age"
-            onChange={() => console.log("Smth")}
-          >
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-          </Select>
 
           <Button
             id="basic-button"
