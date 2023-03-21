@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import { theme } from "./theme";
+import Footer from "./components/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,6 +14,7 @@ root.render(
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <App />
+        <Footer />
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>

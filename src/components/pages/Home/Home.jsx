@@ -18,7 +18,6 @@ const Home = () => {
       <LanguageBar />
       <Header />
       <HomePageContent />
-      <Footer />
     </>
   );
 };
