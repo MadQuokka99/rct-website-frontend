@@ -17,7 +17,6 @@ const Home = () => {
       </Helmet>
       <LanguageBar />
       <HomePageContent />
-      <Footer />
     </>
   );
 };
