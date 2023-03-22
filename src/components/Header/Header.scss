@@ -1,4 +1,4 @@
-@use "src/globalStyleVariables";
+@use "../../globalStyleVariables";
 
 .header {
   background-color: globalStyleVariables.$primary-color;

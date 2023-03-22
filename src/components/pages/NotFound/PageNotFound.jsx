@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import "./PageNotFound.scss";
-import Logo from "../utils/rct-logo.png";
+import Logo from "../../../utils/rct-logo.png";
 import { useNavigate } from "react-router-dom";
 const PageNotFound = () => {
   const navigate = useNavigate();

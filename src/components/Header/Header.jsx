@@ -1,20 +1,17 @@
 import React, { useState } from "react";
-import Logo from "../utils/rct-logo.png";
+import Logo from "../../utils/rct-logo.png";
 import Button from "@mui/material/Button";
-import SearchIcon from "@mui/icons-material/Search";
 import MenuIcon from "@mui/icons-material/Menu";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import strings from "../config/strings";
+import strings from "../../config/strings";
 import "./Header.scss";
 import AudioPlayer from "react-h5-audio-player";
-import { InputLabel, Select } from "@mui/material";
 
 const { general: generalStrings } = strings;
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [language, setLanguage] = useState();
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
