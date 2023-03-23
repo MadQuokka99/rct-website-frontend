@@ -13,50 +13,25 @@ $white-color: #DFDADE;
 
 // TODO: Add a white and a dark color variables
 
-
-// ##### Audio Player #####
-
-// Audio player variables
-$rhap_theme-color: #868686 !default;   // Color of all buttons and volume/progress indicators
-$rhap_background-color: #fff !default; // Color of the player background
-$rhap_bar-color: #e4e4e4 !default;     // Color of volume and progress bar
-$rhap_time-color: #333 !default;       // Font color of current time and duration
-$rhap_font-family: inherit !default;   // Font family of current time and duration
-
-// Audio player general styling
-.rhap_additional-controls{
-  display: none;
+audio::-webkit-media-controls-panel {
+  background-color: $secondary-color;
 }
-.rhap_total-time{
-  display: none;
+
+audio::-webkit-media-controls-play-button {
+  border-radius: 50%;
+  background-color: $secondary-color-darker;
 }
 
 // On big devices
-@media screen and (min-width: 1200px ) {
-  .audioPlayer-header {
-    width: 500px !important;
-    border-radius: 50px;
-  }
-  .audioPlayer-content{
+@media screen and (min-width: $extralarge ) {
+  .audioPlayer-small {
     display: none;
   }
 }
 
 // On small devices
-@media screen and (max-width: 1200px ) {
-  .audioPlayer-header {
+@media screen and (max-width: $extralarge ) {
+  .audioPlayer-big {
     display: none;
   }
-  .audioPlayer-content{
-    justify-content: space-evenly;
-    @media screen and (max-width: 600px ){
-      .rhap_volume-controls{
-        display: none;
-      }
-    }
-
-
-  }
-
-
 }

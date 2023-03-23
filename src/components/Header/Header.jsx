@@ -5,14 +5,18 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import strings from "../../config/strings";
-import "./Header.scss";
-import AudioPlayer from "react-h5-audio-player";
+import { useNavigate } from "react-router-dom";
+import "../../globalStyleVariables.scss";
+import "../Header/Header.scss";
+import AudioPlayer from "../AudioPlayer/AudioPlayer";
 
 const { general: generalStrings } = strings;
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+  const navigate = useNavigate();
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -25,17 +29,8 @@ const Header = () => {
     <>
       <div className="header">
         <img src={Logo} className="logoImage" alt="Website logo" />
-        <div>
-          <AudioPlayer
-            autoPlay={false}
-            src="http://rct.unitbv.ro:8000/;?type=http&nocache=38687"
-            showSkipControls={false}
-            showJumpControls={false}
-            volume={0.5}
-            loop={false}
-            className="audioPlayer-header"
-            layout={"horizontal"}
-          />
+        <div className="audioPlayer-big">
+          <AudioPlayer minWidth="400px" />
         </div>
 
         <div className="menu-left-side">
@@ -44,6 +39,7 @@ const Header = () => {
               variant="contained"
               color="secondary"
               className="menu-button"
+              onClick={() => navigate("/")}
             >
               {generalStrings.header.menuButtons.home}
             </Button>
@@ -72,6 +68,7 @@ const Header = () => {
               variant="contained"
               color="secondary"
               className="menu-button"
+              onClick={() => navigate("/about-us")}
             >
               {generalStrings.header.menuButtons.aboutUs}
             </Button>
@@ -100,7 +97,7 @@ const Header = () => {
             <MenuItem
               onClick={(e) => {
                 handleClose(e);
-                console.log("Here we will navigate");
+                navigate("/home");
               }}
             >
               {generalStrings.header.menuButtons.home}
@@ -132,13 +129,16 @@ const Header = () => {
             <MenuItem
               onClick={(e) => {
                 handleClose(e);
-                console.log("Here we will navigate");
+                navigate("/about-us");
               }}
             >
               {generalStrings.header.menuButtons.aboutUs}
             </MenuItem>
           </Menu>
         </div>
+      </div>
+      <div className="audioPlayer-small">
+        <AudioPlayer width="100%" background={true} />
       </div>
     </>
   );
